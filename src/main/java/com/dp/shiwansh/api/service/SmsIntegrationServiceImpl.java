@@ -51,8 +51,8 @@ public class SmsIntegrationServiceImpl implements SmsIntegrationService {
 		String url = SystemConstants.DOWNSTREAM_URL;
 		ResponseEntity<ResponseMessage> responseEntity = null;
 		// request entity is created with request body and headers
-		HttpEntity<ReceivedMessage> requestEntity = new HttpEntity<>(request, createHeaders("abb40ca70b0d4726",
-				"" + "MmM5MThiYTNiOGJiZjhhOTk3NzFiNmE5MzBlMjk2NWQ5Njk1MjIzZmViZmU2YWEyZjZjMDM2ODk3YWY2M2E2OQ=="));
+		HttpEntity<ReceivedMessage> requestEntity = new HttpEntity<>(request, createHeaders("<USER_NAME>",
+				"" + "<USER_PASSSWORD>"));
 		try {
 			responseEntity = restTemplate.exchange(url, HttpMethod.POST, requestEntity, ResponseMessage.class);
 		} catch (Exception e) {
